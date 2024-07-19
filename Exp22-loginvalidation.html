@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      function loginvalidation(){
+        var uname=document.myform.uname.value;
+        var password=document.myform.pass.value;
+        if(uname==null || uname==" "){
+            alret("Name cant be blank")
+            return false;
+        }
+        else if( password.length<6){
+            alert("Password Must be 6 letter")
+            return false;
+        }
+      }
+      </script>
+      </head>
+    <body>
+        <h2>Login Page</h2>
+        <form name="myform" action="loginissuccess.html" onsubmit="return loginvalidation(this)">
+    User name:<input type="text" name="uname"><br>
+    password:<input type="password" name="pass"><br>
+    <input type="submit" value="submit">
+    </form>
+</body>
+</html>
